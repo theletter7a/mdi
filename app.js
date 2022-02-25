@@ -30,7 +30,7 @@ class DataObj{
 }
 
 function getLogs(){
-    var logs = new WebSocket('wss://milliondollaridea.glitch.me/');
+    var logs = new WebSocket('wss://mdi.ozziexyz.repl.co');
     document.getElementById('output').innerHTML = '';
     logs.onopen = e => {
         var data = new DataObj(idea, 'logs');
