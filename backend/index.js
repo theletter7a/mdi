@@ -4,7 +4,8 @@ const http = require('http');
 
 var server = http.createServer((res, req)=>{
   res.writeHead('200');
-})
+}).listen(8080);
+
 var wss = new WebSocketServer({server: server});
 
 wss.on('connection', ws=>{
