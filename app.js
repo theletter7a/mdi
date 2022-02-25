@@ -2,7 +2,7 @@ document.getElementById('submit').addEventListener('click', ()=>{
     var idea = document.getElementById('idea').value;
     var time = new Date();
     if(idea && idea.length<=85 && time.getTime() - Number(localStorage.getItem('lastVisit')) > 86400000){
-        var ws = new WebSocket('wss://milliondollaridea.glitch.me/');
+        var ws = new WebSocket('wss://mdi.ozziexyz.repl.co');
         ws.onopen = e => {
             var data = new DataObj(idea, 'idea');
             ws.send(JSON.stringify(data));
